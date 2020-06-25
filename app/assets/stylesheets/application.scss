@@ -1,0 +1,43 @@
+$title: #fdcb9e;
+$fondo: #cceabb;
+$color-a: #F7F7F7;
+$color-b: #cceabb;
+$color-c: #3f3f44;
+$color-d: #fdcb9e;
+$colors : (
+	title: $title,
+	fondo: $fondo,
+	color-a: $color-a,
+	color-b: $color-b,
+	color-c: $color-c,
+	color-d: $color-d
+);
+
+body{
+	background-color: $fondo; 
+}
+
+@each $color_name, $color in $colors{
+	.#{$color-name}{
+		background-color: $color !important;
+	}
+	.#{$color-name}-text{
+		color: $color !important;
+	}
+}
+nav{
+	margin-bottom: 10px;
+}
+.list-group{
+	margin-bottom: 10px;
+}
+.nav-link{
+	color: white !important;
+}
+.space-a{
+	margin-top: 15px;
+}
+.space-title{
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
